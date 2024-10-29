@@ -1,0 +1,37 @@
+# 忽略作業系統產生的檔案
+.DS_Store
+Thumbs.db
+
+# 忽略編譯產生的檔案
+/dist
+/build
+/node_modules
+*.o
+*.so
+*.a
+*.class
+*.vitepress/dist/
+*.vitepress/cache/
+
+# 忽略 IDE 或編輯器產生的檔案
+.idea/
+*.iml
+
+# 忽略套件管理工具產生的檔案
+/vendor
+/bower_components
+
+# 忽略敏感資訊
+.env
+*.pem
+*.key
+*.cert
+
+# 忽略日誌檔案
+*.log
+
+# 忽略快取檔案
+*.cache
+
+# 忽略個人設定檔
+*.swp
