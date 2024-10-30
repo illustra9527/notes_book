@@ -51,4 +51,5 @@ export default defineConfig({
       GitChangelogMarkdownSection(),
     ],
   },
+  base: "/notes_book/",
 });
