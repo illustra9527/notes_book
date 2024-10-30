@@ -17,8 +17,13 @@ export default defineConfig({
         {
           text: "vue3 介紹",
           items: [
-            { text: "簡介", link: "/index.md" },
-            { text: "常見類型", link: "/vue3.md" },
+            { text: "本篇內容", link: "/index.md" },
+            { text: "reactive 與 ref", link: "/reactive.md" },
+            { text: "setup 語法糖", link: "/setup.md" },
+            { text: "watch", link: "/watch.md" },
+            { text: "v-model", link: "/v-model.md" },
+            { text: "Composables", link: "/composables.md" },
+            { text: "Pinia", link: "/pinia.md" },
           ],
         },
       ],
@@ -45,7 +50,6 @@ export default defineConfig({
   vite: {
     plugins: [
       GitChangelog({
-        // 填写在此处填写您的仓库链接
         repoURL: () => "https://github.com/illustra9527/notes_book.git",
       }),
       GitChangelogMarkdownSection(),
