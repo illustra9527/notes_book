@@ -24,4 +24,7 @@ features:
   - title: Typescript
     details: 介紹 TS 的型別與
     link: /typescriptDoc
+  - title: VitePress
+    details: 簡單介紹 vitePress
+    link: /vitePress
 ---

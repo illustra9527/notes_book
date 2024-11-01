@@ -11,19 +11,18 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
-    /* 先設定大綱 */
     sidebar: {
       "/vue3/": [
         {
           text: "vue3 介紹",
           items: [
-            { text: "本篇內容", link: "/index.md" },
-            { text: "reactive 與 ref", link: "/reactive.md" },
-            { text: "setup 語法糖", link: "/setup.md" },
-            { text: "watch", link: "/watch.md" },
-            { text: "v-model", link: "/v-model.md" },
-            { text: "Composables", link: "/composables.md" },
-            { text: "Pinia", link: "/pinia.md" },
+            { text: "本篇內容", link: "/vue3/" },
+            { text: "reactive 與 ref", link: "/vue3/reactive" },
+            { text: "setup 語法糖", link: "/vue3/setup" },
+            { text: "watch", link: "/vue3/watch" },
+            { text: "v-model", link: "/vue3/v-model" },
+            { text: "Composables", link: "/vue3/composables" },
+            { text: "Pinia", link: "/vue3/pinia" },
           ],
         },
       ],
@@ -31,13 +30,23 @@ export default defineConfig({
         {
           text: "typescript 介紹",
           items: [
-            { text: "簡介", link: "/index.md" },
-            { text: "常見類型", link: "/vue3.md" },
-            { text: "函式", link: "/function.md" },
-            { text: "泛型（Generics）", link: "/generics.md" },
-            { text: "型別推斷與型別兼容性", link: "/vue3.md" },
-            { text: "interface 和 type 的比較", link: "/vue3.md" },
-            { text: "常見類型", link: "/vue3.md" },
+            { text: "簡介", link: "/typescriptDoc/index" },
+            { text: "常見類型", link: "/typescriptDoc/vue3" },
+            { text: "函式", link: "/typescriptDoc/function" },
+            { text: "泛型（Generics）", link: "/typescriptDoc/generics" },
+            { text: "型別推斷與型別兼容性", link: "/typescriptDoc/vue3" },
+            { text: "interface 和 type 的比較", link: "/typescriptDoc/vue3" },
+            { text: "常見類型", link: "/typescriptDoc/vue3" },
+          ],
+        },
+      ],
+      "/vitePress/": [
+        {
+          text: "vitePress 介紹",
+          items: [
+            { text: "vitePress", link: "/vitePress/index" },
+            { text: "github Actions", link: "/vitePress/github" },
+            { text: "套件", link: "/vitePress/plugin" },
           ],
         },
       ],

@@ -21,7 +21,7 @@
 **Vue2**  
 template 只能存在一個根節點，而且必須存在，有時會出現無意義的包裹元素
 
-```
+```js{2}
 <template>
   <div>template 下只能只有一個 element</div>
 </template>
@@ -30,7 +30,7 @@ template 只能存在一個根節點，而且必須存在，有時會出現無�
 **Vue3**  
 可存在多個根節點
 
-```
+```js
 <template>
   <div>element 1</div>
   <div>element 2</div>
@@ -46,7 +46,7 @@ template 只能存在一個根節點，而且必須存在，有時會出現無�
 簡單的組件很直觀，但在大型或複雜組件中不易組織和重複利用邏輯
 也會造成爬程式碼的混亂
 
-```
+```js
 export default {
   date() {
     return {
@@ -67,7 +67,7 @@ export default {
 
 可將同一邏輯封裝在一起，不用在分散到各個屬性中
 
-```
+```js
 export default {
   setup() {
     const count = ref(0);
@@ -103,7 +103,7 @@ Vue 3 將部分生命週期方法改為以 `onXxx` 形式的 Composition API
 新增了 onBeforeUnmount 和 onUnmounted，替代 Vue 2 的 `beforeDestroy` 和 `destroyed`
 Vue 3 允許在 setup 中使用生命週期方法，可以按需引入
 
-```
+```js
 import { onMounted, onUnmounted } from "vue";
 
 export default {
@@ -124,7 +124,7 @@ export default {
 **Vue2**
 以函數回傳物件，確保每個組件有自己的 data
 
-```
+```js
 data() {
   return {
     count: 0
@@ -135,7 +135,7 @@ data() {
 **Vue3**
 直接在 setup 中定義，以 ref 或 reactive 來建立響應式資料
 
-```
+```js
 <script setup>
 import { ref, reactive } from "vue";
 
@@ -150,7 +150,7 @@ const state = reactive({ count: 0 });
 
 props 在 Options API 中定義，並需透過 `this.$emit` 來傳遞事件
 
-```
+```js
 // 父組件
 <ChildComponent :message="msg" @update="handleUpdate" />
 
@@ -163,13 +163,12 @@ export default {
     },
   },
 };
-
 ```
 
 **Vue3**
 在 setup 可直接存取傳入的 props，使用 context.emit 來觸發事件
 
-```
+```js
 // 父組件
 <ChildComponent v-model="msg" />
 
@@ -184,7 +183,6 @@ function updateMessage() {
   emit("update:modelValue", "New message");
 }
 </script>
-
 ```
 
 ## typescript
