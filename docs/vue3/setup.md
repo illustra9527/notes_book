@@ -10,6 +10,8 @@
 - `template` 可直接使用
 - 在編譯上，`<script setup>` 比傳統 `setup` 更有效率
 
+**註: setup 裡面 this 是指向 undefined**
+
 ## 範例
 
 ### script setup

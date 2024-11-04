@@ -22,6 +22,7 @@ export default defineConfig({
             { text: "watch", link: "/vue3/watch" },
             { text: "v-model", link: "/vue3/v-model" },
             { text: "Composables", link: "/vue3/composables" },
+            { text: "Tree-Shaking", link: "/vue3/treeShaking" },
             { text: "Pinia", link: "/vue3/pinia" },
           ],
         },
