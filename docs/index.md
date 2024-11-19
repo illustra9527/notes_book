@@ -27,4 +27,7 @@ features:
   - title: VitePress
     details: 簡單介紹 vitePress
     link: /vitePress
+  - title: Javascript 學習筆記
+    details: 介紹新學的 js 語法
+    link: /javascriptDoc
 ---

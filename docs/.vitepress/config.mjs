@@ -54,6 +54,14 @@ export default defineConfig({
           ],
         },
       ],
+      "/javascriptDoc/": [
+        {
+          text: "js 學習筆記",
+          items: [
+            { text: "for-of", link: "/javascriptDoc/for-of" }
+          ],
+        },
+      ],
     },
 
     socialLinks: [
