@@ -7,7 +7,7 @@
 - TypeScript 的支援
 
 ## 範例
-
+### 1 
 ```js
 // Pinia store.js
 import { defineStore } from 'pinia';
@@ -29,6 +29,45 @@ export const useCounterStore = defineStore('counter', {
 // 在組件中使用時
 const counter = useCounterStore();
 counter.increment(); // 直接調用 action
+```
+
+### 2 通常使用
+
+在 defineStore 裡面定義的 (const) 的變數， 就是存在 store
+return 後可使用。在重新整理，整個 app 重新渲染之前都會存在
+
+```js
+// 檔案會存在 @/store/user-info.ts
+import { defineStore } from 'pinia'
+
+export const useUserInfoStore = defineStore('userInfo', () => {
+  const userInfo = ref<any>({
+    name: 'John Lee'
+  })
+
+  const setUserInfo = (data: any) => {
+    userInfo.value = {
+      ...userInfo.value,
+      ...data
+    }
+  }
+
+  const getUserInfo = (key: string) => {
+    return userInfo.value[key] ?? ''
+  }
+
+  const resetUserInfo = () => {
+    userInfo.value = {}
+  }
+
+  return { userInfo, setUserInfo, resetUserInfo, getUserInfo }
+})
+
+
+// 組件使用時
+import { useUserInfoStore } from '@stores/user-info.ts'
+
+const { userInfo, setUserInfo } = useUserInfoStore()
 ```
 
 ## vs VueX
