@@ -5,7 +5,7 @@ vue3 對於雙向綁定的調整
 - 支援自訂 prop 和事件名稱，還可以在單個組件中使用多個 v-model
 
 - 修正預設綁定 prop 名稱與事件，統一的命名約定
-vue2 原本是綁定 `input` 跟 `value`，改為 `modelValue`，並使用 `update:modelValue` 事件
+  vue2 原本是綁定 `input` 跟 `value`，改為 `modelValue`，並使用 `update:modelValue` 事件
 
 ```js
 /* 子組件 */
@@ -45,3 +45,18 @@ const postTitle = ref('初始標題')
 const postContent = ref('初始內容')
 </script>
 ```
+
+因為已經有預設綁定，所以只需要這樣寫就可以不用再寫 props 跟 emit
+但只能綁定一個值，父組件只需要用 v-model 綁定即可
+
+```js
+
+// 子組件
+const modelValue = defineModel<string | number>('modelValue')
+
+
+// 父組件
+<child v-model="data" />
+```
+
+
